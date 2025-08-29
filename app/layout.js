@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../src/app/globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,19 +11,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "🇨🇱 Fiestas Patrias Chile - 18 de Septiembre",
   description: "Chatbot sobre las tradiciones chilenas del 18 de Septiembre: comidas, historia, música y juegos típicos",
   icons: {
-    icon: "/chile-flag.svg",
+    icon: "/icon.png",
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <body
