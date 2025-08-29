@@ -55,7 +55,7 @@ export default function Home() {
       const data = await res.json();
 
       setMessages((prev) => [...prev, { role: "assistant", content: data.answer }]);
-    } catch (error) {
+    } catch (err) {
       setMessages((prev) => [...prev, { role: "assistant", content: "Error al procesar tu consulta. ¡Inténtalo de nuevo!" }]);
     } finally {
       setIsLoading(false);
@@ -229,9 +229,9 @@ export default function Home() {
                       color: '#374151',
                       marginBottom: '10px'
                     }}>Ejemplos de preguntas:</p>
-                    <p style={{ color: '#1D4ED8', margin: '5px 0' }}>"¿Qué comidas típicas hay?" 🥟</p>
-                    <p style={{ color: '#DC2626', margin: '5px 0' }}>"¿Cómo se baila cueca?" 💃</p>
-                    <p style={{ color: '#1D4ED8', margin: '5px 0' }}>"¿Qué juegos hay en las fondas?" 🎯</p>
+                    <p style={{ color: '#1D4ED8', margin: '5px 0' }}>&ldquo;¿Qué comidas típicas hay?&rdquo; 🥟</p>
+                    <p style={{ color: '#DC2626', margin: '5px 0' }}>&ldquo;¿Cómo se baila cueca?&rdquo; 💃</p>
+                    <p style={{ color: '#1D4ED8', margin: '5px 0' }}>&ldquo;¿Qué juegos hay en las fondas?&rdquo; 🎯</p>
                   </div>
                 </div>
               )}
